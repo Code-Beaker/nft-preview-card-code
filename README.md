@@ -12,12 +12,9 @@ This is a solution to the [NFT preview card component challenge on Frontend Ment
 
 ## Overview
 
-
-https://github.com/Code-Beaker/nft-preview-card-code/assets/99812762/f04b521b-e378-4128-b8a4-728720341837
-
-
 ### Video Preview
-
+https://github.com/Code-Beaker/nft-preview-card-code/assets/99812762/f04b521b-e378-4128-b8a4-728720341837
+*Used a video since I was unable to take a screenshot with active states*
 
 ## Links
 
