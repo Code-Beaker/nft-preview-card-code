@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+:root {
+  --font-main: "Outfit", sans-serif;
+  --weight-light: 300;
+  --weight-regular: 400;
+  --weight-medium: 600;
+
+  --font-size: 18px;
+
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+
+  --main-dark-blue: hsl(217, 54%, 11%);
+  --card-dark-blue: hsl(216, 50%, 16%);
+  --line-dark-blue: hsl(215, 32%, 27%);
+
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-main);
+}
+
+body {
+  padding: 50px;
+  background: var(--main-dark-blue);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  max-height: 750px;
+  max-width: 400px;
+  padding: 20px 30px;
+  border-radius: 20px;
+  background: var(--card-dark-blue);
+}
+
+.card__img-wrapper {
+  text-align: center;
+  /* border: 1px solid red; */
+  min-height: 350px;
+  max-width: 400px;
+  background-image: url(./img/image-equilibrium.jpg);
+  background-size: cover;
+  border-radius: 10px;
+  background-position: center;
+  margin: 10px auto;
+
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.card__img-wrapper::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  background: var(--cyan);
+  z-index: 1;
+  transition: 200ms ease-out;
+}
+
+.view-icon {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  z-index: 2;
+  opacity: 0;
+  transition: 200ms ease-out;
+}
+
+.card__img-wrapper:hover::after {
+  opacity: 0.5;
+}
+
+.card__img-wrapper:hover .view-icon {
+  opacity: 1;
+}
+
+.card__heading {
+  margin: 20px auto;
+  color: var(--white);
+  transition: 200ms ease-out;
+}
+
+.card__heading:hover {
+  cursor: pointer;
+  color: var(--cyan);
+}
+
+.card p {
+  color: var(--soft-blue);
+}
+
+.info-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin: 20px auto;
+}
+
+.amount,
+.time {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.profile-wrapper {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  height: 50px;
+}
+
+hr {
+  margin: 15px auto;
+  border-color: var(--line-dark-blue);
+}
+
+.profile-wrapper img {
+  width: 30px;
+  border-radius: 50%;
+  border: 1px solid var(--white);
+}
+
+.profile-wrapper .profile-name {
+  color: var(--white);
+  font-weight: var(--weight-regular);
+  transition: 200ms ease-out;
+}
+
+.profile-wrapper .profile-name:hover {
+  cursor: pointer;
+  color: var(--cyan);
+}
